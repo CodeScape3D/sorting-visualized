@@ -1,5 +1,4 @@
 import React from "react";
-import "../../../css/Home/VisualizerToolBar/VisualizerToolBar.css";
 const VisualizerToolBar = ({
 	onPlay,
 	onPause,
@@ -11,28 +10,28 @@ const VisualizerToolBar = ({
 	onArraySizeChange
 }) => {
 	return (
-		<div className="VisualizerToolBar">
-			<button className="ui icon button" onClick={onRepeat}>
+		<div>
+			<button onClick={onRepeat}>
 				<i className="large redo icon"></i>
 			</button>
-			<button className="ui icon button" onClick={onBackward}>
+			<button onClick={onBackward}>
 				<i className="large angle left icon"></i>
-			</button>{" "}
-			<button className="ui icon blue button" onClick={playing ? onPause : onPlay}>
+			</button>
+			<button onClick={playing ? onPause : onPlay}>
 				<i className={playing ? "large pause icon" : "large play icon"}></i>
 			</button>{" "}
-			<button className="ui icon button" onClick={onForward}>
+			<button onClick={onForward}>
 				<i className="large angle right icon"></i>
 			</button>
 			<div id="speed-border-wrapper">
 				<div id="speed-select-wrapper">
-					<div id="speed-select-label-wrapper" style={{ marginTop: "10px" }}>
-						<label className="control-label" htmlFor="speed-select-wrapper">
+					<div id="speed-select-label-wrapper">
+						<label htmlFor="speed-select-wrapper">
 							Speed Selector
 						</label>
 					</div>
 					<select
-						className="ui compact selection dropdown"
+
 						id="speed-select"
 						defaultValue="1"
 						onChange={onAdjustSpeed}>
@@ -50,14 +49,13 @@ const VisualizerToolBar = ({
 					</select>
 				</div>
 				<div id="array-size-select-wrapper">
-					<div id="arrsize-select-label-wrapper" style={{ marginTop: "10px" }}>
-						<label className="control-label" htmlFor="array-size-select-wrapper">
+					<div id="arrsize-select-label-wrapper">
+						<label htmlFor="array-size-select-wrapper">
 							Array Length
 						</label>
 					</div>
 					<select
 						onChange={onArraySizeChange}
-						className="ui compact selection dropdown"
 						defaultValue="5">
 						<option value="3">3</option>
 						<option value="5">5</option>

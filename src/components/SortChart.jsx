@@ -1,7 +1,7 @@
 import React from "react";
-import "./SortChart.css";
+import "./css/SortChart.css";
 
-import Bar from "../Bar";
+import Bar from "./Bar";
 
 const getListOfBars = (numbers, maxNum, firstSet, secondSet, thirdSet, fourthSet, sortedSet) => {
 	return numbers.map((num, i) => {

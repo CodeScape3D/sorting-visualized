@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import "../../../css/Home/SortVisualizer/SortVisualizer.css";
-import SortChart from "../SortChart/SortChart";
-import VisualizerToolBar from "../VisualizerToolBar/VisualizerToolBar";
-import ColorKey from "../LegendRow";
+import "./css/SortVisualizer.css";
+import SortChart from "./SortChart";
+import VisualizerToolBar from "./VisualizerToolBar";
 class SortVisualizer extends Component {
 	state = {
 		stepHistory: [],
@@ -55,7 +54,7 @@ class SortVisualizer extends Component {
 			thirdSet: currVisualization.thirdSet,
 			fourthSet: currVisualization.fourthSet,
 			sortedSet: currVisualization.sortedSet,
-			isOver: this.state.sortedSet.length + 1 == this.state.array.length
+			isOver: this.state.sortedSet.length + 1 === this.state.array.length
 		});
 	};
 
@@ -138,7 +137,7 @@ class SortVisualizer extends Component {
 
 	render() {
 		return (
-			<div className="SortVisualizer">
+			<div>
 				<SortChart
 					numbers={this.state.array}
 					maxNum={Math.max(...this.state.array)}
@@ -164,7 +163,6 @@ class SortVisualizer extends Component {
 					onArraySizeChange={this.props.onArraySizeChange}
 				/>
 
-				<ColorKey {...this.props.colorKey} algorithm={this.props.algorithm} />
 			</div>
 		);
 	}

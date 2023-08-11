@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../css/Home/Bar/Bar.css";
+import "./css/Bar.css";
 
 const Bar = ({
 	width,
