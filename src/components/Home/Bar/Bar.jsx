@@ -13,7 +13,7 @@ const Bar = ({
 	style
 }) => {
 	let classNames = "Bar";
-	const factor = 0.3;
+
 	if (sortedState) classNames += " sortedState";
 	if (fourthState) classNames += " state_d";
 	else if (thirdState) classNames += " state_c";
@@ -21,10 +21,6 @@ const Bar = ({
 	else if (firstState) classNames += " state_a";
 
 	let currentBarStyling = { ...style, width: `${width}%`, height: `${height}%` };
-	if (firstState || secondState || thirdState || fourthState) {
-		currentBarStyling["marginRight"] = `${factor * width}%`;
-		currentBarStyling["marginLeft"] = `${factor * width}%`;
-	}
 
 	return (
 		<div style={currentBarStyling} className={classNames}>
